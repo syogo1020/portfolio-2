@@ -1,0 +1,793 @@
+@charset "UTF-8";
+body {
+  color: #000000;
+  background-color: #C4CCEB;
+}
+
+.u-desktop {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .u-desktop {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .u-mobile {
+    display: none;
+  }
+}
+
+/* FontFamily */
+body {
+  font-family: "筑紫B丸ゴシック", sans-serif;
+}
+
+/* font-weight */
+/* リキッドレイアウト対応 */
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 2.6666666667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 0.78125vw;
+  }
+}
+/* pcの電話番号発信対応 */
+@media screen and (min-width: 768px) {
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+}
+
+/* ホバー */
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+@media screen and (min-width: 768px) {
+  a:hover {
+    opacity: 0.8;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* フォームリセット */
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  display: none;
+}
+
+input[type=submit],
+input[type=button],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.c-btn {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 51px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 4rem;
+  -webkit-box-shadow: 6px 10px #000000;
+          box-shadow: 6px 10px #000000;
+  padding: 0.7rem 8.1rem;
+}
+@media screen and (min-width: 768px) {
+  .c-btn {
+    padding: 1.6rem 12rem;
+  }
+}
+
+.l-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.l-inner {
+  width: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .l-inner {
+    max-width: 105.4rem;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+}
+
+.l-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.l-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-profile {
+    margin: 0 21.5rem;
+    padding: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.p-book-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 2.8rem;
+}
+@media screen and (min-width: 768px) {
+  .p-book-body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 8.5rem;
+  }
+}
+
+.p-book-body__left {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .p-book-body__left {
+    width: 37%;
+  }
+}
+
+.p-book-body__right {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .p-book-body__right {
+    margin-left: 8.5%;
+    width: 62%;
+  }
+}
+
+.p-book-body__right--head {
+  line-height: 1.7;
+  font-family: "游ゴシック体", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  padding-top: 7.9rem;
+}
+@media screen and (min-width: 768px) {
+  .p-book-body__right--head {
+    padding: 0;
+    font-size: 2rem;
+    padding-top: 0.2rem;
+  }
+}
+
+.p-book-body__right--foot {
+  margin-top: 9rem;
+}
+@media screen and (min-width: 768px) {
+  .p-book-body__right--foot {
+    margin: 6.5rem 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.p-book-body__text:nth-child(n+2) {
+  margin-top: 2.7rem;
+}
+@media screen and (min-width: 768px) {
+  .p-book-body__text:nth-child(n+2) {
+    margin-top: 3.5rem;
+  }
+}
+
+.p-book {
+  padding: 2.5rem 0 11.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-book {
+    padding: 2.5rem 0 15rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-book {
+    padding: 7.5rem 0 15rem;
+  }
+}
+
+.p-book__title {
+  position: relative;
+  text-align: center;
+  color: #030303;
+  font-weight: 700;
+  font-size: 2.1rem;
+  letter-spacing: 0.161rem;
+}
+@media screen and (min-width: 768px) {
+  .p-book__title {
+    letter-spacing: 0.9rem;
+    font-size: 8rem;
+  }
+}
+.p-book__title::before, .p-book__title::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  border-radius: 11px;
+  width: 2.6rem;
+  height: 0.5rem;
+  top: 80%;
+}
+@media screen and (min-width: 768px) {
+  .p-book__title::before, .p-book__title::after {
+    width: 9.5rem;
+    height: 1.3rem;
+    top: 65%;
+  }
+}
+.p-book__title::before {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+  left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .p-book__title::before {
+    left: -1.3rem;
+  }
+}
+.p-book__title::after {
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+  right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .p-book__title::after {
+    right: -1.3rem;
+  }
+}
+
+.p-footer {
+  padding: 3.1rem 0 9.8rem;
+}
+@media screen and (min-width: 768px) {
+  .p-footer {
+    padding: 9rem 0;
+  }
+}
+
+.p-footer__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.p-footer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.p-footer__item:nth-child(2) {
+  margin-left: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .p-footer__item:nth-child(2) {
+    margin-left: 6.5rem;
+  }
+}
+
+.p-footer__text {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.6875;
+  font-family: "游ゴシック体", sans-serif;
+}
+
+.p-logo {
+  padding: 2.5rem 0 7.8rem;
+}
+@media screen and (min-width: 768px) {
+  .p-logo {
+    padding: 2.5rem 0 13rem;
+  }
+}
+
+.p-logo__img {
+  width: 5rem;
+}
+
+.p-logo__title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin-left: 2rem;
+  color: #101010;
+}
+
+.p-profile-right {
+  padding: 0 1rem;
+  margin: 13.6rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .p-profile-right {
+    margin: 0 0 0 18.6rem;
+    padding: 0;
+  }
+}
+
+.p-profile {
+  background-color: #fff;
+  margin: 0 calc(50% - 50vw);
+  padding: 12.3rem 0 17.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-profile {
+    padding: 8rem 0 10rem;
+  }
+}
+
+.p-profile__head {
+  width: 24.6rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .p-profile__head {
+    width: 32.4rem;
+  }
+}
+
+.p-profile__center {
+  margin-top: 2.8rem;
+}
+@media screen and (min-width: 768px) {
+  .p-profile__center {
+    margin-top: 9.6rem;
+  }
+}
+
+.p-profile__center--mg {
+  margin-top: 5.6rem;
+}
+@media screen and (min-width: 768px) {
+  .p-profile__center--mg {
+    margin-top: 9.6rem;
+  }
+}
+
+.p-profile__center--top {
+  font-size: 3rem;
+  line-height: 1.7;
+  font-weight: 700;
+  font-family: "游ゴシック体", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .p-profile__center--top {
+    font-size: 3.2rem;
+    line-height: 1.6875;
+  }
+}
+
+.p-profile__large {
+  font-size: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .p-profile__large {
+    font-size: 3.2rem;
+  }
+}
+
+.p-profile__center--bottom {
+  font-size: 1.6rem;
+  line-height: 1.6875;
+  font-weight: 700;
+  font-family: "游ゴシック体", sans-serif;
+  padding-top: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-profile__center--bottom {
+    padding-top: 0;
+  }
+}
+
+.p-profile__foot {
+  font-size: 1.6rem;
+  line-height: 1.6875;
+  font-style: normal;
+  font-weight: 700;
+  font-family: "游ゴシック体", sans-serif;
+  color: #020202;
+  padding-top: 1.4rem;
+}
+@media screen and (min-width: 768px) {
+  .p-profile__foot {
+    padding-top: 4rem;
+  }
+}
+
+.p-profile__foot--top {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "游ゴシック体", sans-serif;
+  color: #020202;
+}
+@media screen and (min-width: 768px) {
+  .p-profile__foot--top {
+    font-size: 1.6rem;
+  }
+}
+
+.p-profile__foot--bottom {
+  font-size: 1.5rem;
+  padding-top: 0.7rem;
+}
+@media screen and (min-width: 768px) {
+  .p-profile__foot--bottom {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: "游ゴシック体", sans-serif;
+    color: #020202;
+    padding-top: 0.5rem;
+  }
+}
+
+.p-score {
+  padding: 20rem 0 9.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-score {
+    padding: 4.5rem 0 9.5rem;
+  }
+}
+
+.p-score__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.p-score__title--img {
+  width: 3.3rem;
+}
+@media screen and (min-width: 768px) {
+  .p-score__title--img {
+    width: 8rem;
+  }
+}
+
+.p-score__title--center {
+  font-size: 1.9rem;
+  letter-spacing: 0.095rem;
+  color: #101010;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-score__title--center {
+    font-size: 5rem;
+    margin: 0 3.8rem;
+    letter-spacing: 0.25rem;
+  }
+}
+
+.p-score-body {
+  border-radius: 43px;
+  margin-top: 3.4rem;
+  border: 0.8rem solid #fff;
+}
+@media screen and (min-width: 768px) {
+  .p-score-body {
+    border: 1.5rem solid #fff;
+    margin-top: 5.8rem;
+  }
+}
+
+.p-score-body__head {
+  font-size: 8rem;
+  position: relative;
+  font-weight: 700;
+  color: #222222;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 2.4rem;
+}
+@media screen and (min-width: 768px) {
+  .p-score-body__head {
+    font-size: 16rem;
+    width: 55.5rem;
+    padding-top: 5.5rem;
+  }
+}
+.p-score-body__head::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 1.8rem;
+  background-color: #C4CCEB;
+  background-image: repeating-linear-gradient(-45deg, #707070, #707070 1px, transparent 0, transparent 5px);
+  width: 80%;
+}
+@media screen and (min-width: 768px) {
+  .p-score-body__head::after {
+    width: 100%;
+    bottom: 0;
+  }
+}
+
+.p-score__body__foot {
+  font-size: 1.8rem;
+  line-height: 1.7223;
+  color: #000000;
+  font-weight: 700;
+  padding: 7.8rem 3rem 7rem;
+}
+@media screen and (min-width: 768px) {
+  .p-score__body__foot {
+    font-size: 3rem;
+    line-height: 1.7;
+    padding: 4.5rem 17.6rem 6.7rem;
+  }
+}
+
+.p-score-body__head--small {
+  font-size: 5rem;
+  color: #222222;
+  font-weight: 700;
+  vertical-align: middle;
+}
+@media screen and (min-width: 768px) {
+  .p-score-body__head--small {
+    font-size: 10rem;
+  }
+}
+
+.p-tax {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 3.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .p-tax {
+    padding: 0 10.8rem 0;
+  }
+}
+
+.p-tax__head {
+  width: 26.3rem;
+  font-family: "筑紫B丸ゴシック", sans-serif;
+  line-height: 2.25;
+  font-weight: 700;
+  background-color: #fff;
+  text-align: center;
+  color: #000000;
+  font-size: 2.6rem;
+}
+@media screen and (min-width: 768px) {
+  .p-tax__head {
+    width: 79.5rem;
+    font-size: 8rem;
+  }
+}
+
+.p-tax__foot {
+  margin-top: 1.1rem;
+  font-family: "筑紫B丸ゴシック", sans-serif;
+  font-weight: 700;
+  background-color: #fff;
+  text-align: center;
+  color: #000000;
+  font-size: 2.6rem;
+  width: 13.9rem;
+  line-height: 2.25;
+}
+@media screen and (min-width: 768px) {
+  .p-tax__foot {
+    margin-top: 2.6rem;
+    width: 42.2rem;
+    font-size: 8rem;
+    line-height: 2.25;
+  }
+}
+
+.p-top {
+  padding: 1rem 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .p-top {
+    padding: 1rem 0 20rem;
+  }
+}
+
+.p-top__bottom {
+  position: relative;
+}
+.p-top__bottom::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.2rem;
+  right: 48%;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-top: 0.5rem solid #000;
+  border-right: 0.5rem solid #000;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  margin: 7.8rem auto;
+  border-radius: 0.3rem;
+}
+@media screen and (min-width: 768px) {
+  .p-top__bottom::before {
+    width: 4rem;
+    height: 4rem;
+    top: -2.2rem;
+    border-top: 0.8rem solid #000;
+    border-right: 0.8rem solid #000;
+  }
+}
